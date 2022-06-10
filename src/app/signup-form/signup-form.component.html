@@ -1,0 +1,33 @@
+
+<!-- //REACTIVE FORMS  -->
+    <form [formGroup]="forma" (ngSubmit)="login()">
+    <div *ngIf="forma.errors" class="alert alert-danger">
+        username or password is invalid
+    </div>
+    <div formGroupName="account">
+        <div class="form-group">
+            <label for="username">Username</label>
+            <input 
+                formControlName="username"
+                id="username" 
+                type="text" 
+                class="form-control">
+                <div *ngIf="korisnickoIme.pending">Checking for uniqueness...</div>
+                <div *ngIf="korisnickoIme.touched && korisnickoIme.invalid" class="alert alert-danger">
+                    <div *ngIf="korisnickoIme.errors?.['required']">Username is required!!!!</div> 
+                    <div *ngIf="korisnickoIme.errors?.['minlength']">Username should have at least {{korisnickoIme.errors?.['minlength'].requiredLength}} characters!!!!</div>
+                    <div *ngIf="korisnickoIme.errors?.['cannotContainSpace']">Username cannot contain space</div>   
+                    <div *ngIf="korisnickoIme.errors?.['shouldBeUnique']">Username is already taken</div>   
+                </div>
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input 
+                formControlName="password"
+                id="password" 
+                type="text" 
+                class="form-control">
+        </div>
+    </div>
+    <button class="btn btn-primary" type="submit">Sign Up</button>
+</form>

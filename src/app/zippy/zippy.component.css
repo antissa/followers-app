@@ -1,0 +1,12 @@
+.zippy-heading {
+    background-color: grey;
+    border: 2px solid black;
+    cursor:pointer;
+}
+.zippy-body {
+    background-color: rgb(255, 255, 255);
+    border: 2px dotted black;
+}
+.expanded {
+    background-color: #ccc;
+}
