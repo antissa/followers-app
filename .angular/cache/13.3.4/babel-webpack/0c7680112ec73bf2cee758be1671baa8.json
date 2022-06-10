@@ -1,0 +1,1 @@
+{"ast":null,"code":"export class AppErrorHandler {\n  handleError(error) {\n    alert('An unexpected error occured!');\n    console.log(error);\n  }\n\n}","map":null,"metadata":{},"sourceType":"module"}

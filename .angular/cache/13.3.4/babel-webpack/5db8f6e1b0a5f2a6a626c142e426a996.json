@@ -1,0 +1,1 @@
+{"ast":null,"code":"export class TecajeviService {\n  getTecajevi() {\n    return ['tecaj1', 'tecaj2', 'tecaj3', 'tecaj4'];\n  }\n\n}","map":null,"metadata":{},"sourceType":"module"}

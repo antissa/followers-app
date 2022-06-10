@@ -1,0 +1,1 @@
+{"ast":null,"code":"import { AppError } from \"./app-error\";\nexport class NotFoundError extends AppError {}","map":null,"metadata":{},"sourceType":"module"}
